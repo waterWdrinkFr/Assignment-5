@@ -5,15 +5,11 @@ function Feature(){
     const [movies, setMovies] = useState([])
 
     function shuffle(array) {
-        let currentIndex = array.length;
-
-        while (currentIndex !== 0) {
-            let randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-
-            [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+        for (let i = array.length - 1; i > 0; i--) {
+            const randomIndex = Math.floor(Math.random() * (i + 1));
+            [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
         }
-        return array
+        return array;
     }
 
     useEffect(() => {
