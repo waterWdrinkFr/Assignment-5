@@ -27,4 +27,4 @@ function Feature(){
     )
 }
 
-export default Feature
+export default Feature;
