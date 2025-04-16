@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import autoplay styles
-import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay module
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 function Hero() {
     const [movies, setMovies] = useState([]);
@@ -30,7 +30,7 @@ function Hero() {
     return (
         <div className="relative top-[110px] w-full">
             <Swiper modules={[Navigation, Pagination, Autoplay]} navigation autoplay={{ delay: 4000, disableOnInteraction: false }}
-                loop={true} className="w-full h-[500px]"> {movies.map((movie) => (
+                loop={true} className="w-full h-[600px]"> {movies.map((movie) => (
                     <SwiperSlide key={movie.id}>
                         <div className="relative w-full h-full">
                             <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} className="w-full h-full object-cover"/>
