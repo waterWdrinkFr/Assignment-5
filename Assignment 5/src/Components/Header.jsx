@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <div className="fixed top-0 left-0 w-full h-[100px] bg-black z-20 px-8">
+        <div className="fixed top-0 left-0 w-full h-[110px] bg-gradient-to-b from-black to-transparent z-20 px-8">
             <div className="flex justify-between items-center h-full">
                 <h1 className="text-3xl font-bold text-sky-500">JStreaming</h1>
                 <input
@@ -10,12 +10,13 @@ function Header() {
                 <span className="mt-6 mr-40 h-[40px] w-[70px] text-xl font-bold text-sky-500 underline cursor-pointer">
                     Genres
                 </span>
-                <button className="h-[40px] w-[70px] rounded-lg text-xs font-bold text-black bg-sky-500 cursor-pointer">
+                <button className="h-[35px] w-[70px] rounded-lg text-xs font-bold text-black bg-sky-500 cursor-pointer">
                     LOGIN
                 </button>
-                <button className="h-[40px] w-[90px] rounded-lg text-xs font-bold text-black bg-sky-500 cursor-pointer">
+                <button className="h-[35px] w-[90px] rounded-lg text-xs font-bold text-black bg-sky-500 cursor-pointer">
                     REGISTER
                 </button>
+
             </div>
         </div>
     );

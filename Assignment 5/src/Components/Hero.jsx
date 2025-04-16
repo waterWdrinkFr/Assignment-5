@@ -1,16 +1,47 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay"; // Import autoplay styles
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay module
+
 function Hero() {
+    const [movies, setMovies] = useState([]);
+
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const randomIndex = Math.floor(Math.random() * (i + 1));
+            [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+        }
+        return array;
+    }
+
+    useEffect(() => {
+        (async function fetchTopRatedMovies() {
+            const response = await axios.get(
+                `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`
+            );
+            setMovies(shuffle(response.data.results).slice(0, 10));
+        })();
+    }, []);
+
     return (
-        <div  className = "absolute top-[100px] w-full">
-            <div className = "relative flex justify-center items-center text-center">
-                <h1
-                    className = "absolute bottom-[60%] w-[85%] p-4 rounded text-4xl font-bold text-sky-500 bg-[rgba(94,94,94,0.4)]">
-                    Catch Up On the Latest and Greatest Shows and Movies
-                </h1>
-                <button
-                    className = "absolute bottom-[1.5%] left-[7.25%] w-[45%] h-[12.5%] text-4xl font-bold text-sky-500 bg-gradient-to-r from-black/50 to-transparent border-none cursor-pointer">
-                    Watch Now
-                </button>
-            </div>
+        <div className="relative top-[110px] w-full">
+            <Swiper modules={[Navigation, Pagination, Autoplay]} navigation autoplay={{ delay: 4000, disableOnInteraction: false }}
+                loop={true} className="w-full h-[500px]"> {movies.map((movie) => (
+                    <SwiperSlide key={movie.id}>
+                        <div className="relative w-full h-full">
+                            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt={movie.title} className="w-full h-full object-cover"/>
+                            <div className="absolute bottom-0 left-0 w-full h-[100px] p-4 bg-gradient-to-t from-black to-transparent text-white">
+                                <h2 className="mt-1 text-2xl font-bold">{movie.title}</h2>
+                                <button className="px-4 py-2 bg-sky-600 text-white font-bold rounded-lg cursor-pointer"> Watch Now </button>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </div>
     );
 }

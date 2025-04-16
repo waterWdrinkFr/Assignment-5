@@ -1,5 +1,6 @@
 import Header from "../Components/Header";
 import Hero from "../Components/Hero"; 
+import Feature from "../Components/Feature";
 import Footer from "../Components/Footer";
 
 function HomeView() {
@@ -7,6 +8,7 @@ function HomeView() {
         <>
             <Header />
             <Hero />
+            <Feature />
             <Footer />
         </>
     )

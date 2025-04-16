@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
-function Feature(){
-    const [movies, setMovies] = useState([])
+function Feature() {
+    const [movies, setMovies] = useState([]);
 
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -17,14 +17,22 @@ function Feature(){
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-            setMovies(shuffle(response.data.results))
+            setMovies(shuffle(response.data.results).slice(0, 3));
         })();
     }, []);
 
-    return(
-        <div>
+    return (
+        <div className="p-4">
+            <div className="flex flex-wrap justify-center gap-18">
+                {movies.map((movie) => (
+                    <div key={movie.id} className="mt-[0.5%] w-[15%] h-[auto] bg-blue-900 text-white rounded-lg overflow-hidden shadow-lg">
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className="w-full h-[85%] object-cover"/>
+                        <div className="p-2 text-center"> <h3 className="text-sm font-bold">{movie.title}</h3> </div>
+                    </div>
+                ))}
+            </div>
         </div>
-    )
+    );
 }
 
 export default Feature;
