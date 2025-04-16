@@ -5,7 +5,7 @@ function Header() {
                 <button className="mt-0.5 w-[230px] text-3xl font-bold text-white bg-blue-900 cursor-pointer">JStreaming </button>
                 <input className="mt-0.5 ml-90 w-[500px] h-[30px] rounded-full border-none px-4 text-base outline-none bg-white text-black"
                     placeholder="Search Title"/>
-                <span className="mt-2 mr-40 h-[40px] w-[70px] text-xl font-bold text-sky-600 underline cursor-pointer">
+                <span className="mt-4 mr-40 h-[40px] w-[70px] text-xl font-bold text-sky-600 underline cursor-pointer">
                     Genres
                 </span>
                 <button className="mt-0.5 h-[35px] w-[70px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer">
