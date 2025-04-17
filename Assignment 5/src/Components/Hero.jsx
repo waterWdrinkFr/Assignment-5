@@ -23,7 +23,7 @@ function Hero() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-            setMovies(shuffle(response.data.results).slice(0, 10));
+            setMovies(shuffle(response.data.results).slice(0, 5));
         })();
     }, []);
 
