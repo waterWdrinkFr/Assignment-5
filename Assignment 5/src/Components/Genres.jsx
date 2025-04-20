@@ -4,8 +4,8 @@ import axios from "axios";
 
 function Genres() {
     const [genres, setGenres] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState(28); // Default to "Action" (ID: 28)
-    const navigate = useNavigate(); // Hook to navigate programmatically
+    const [selectedGenre, setSelectedGenre] = useState(28);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchGenres = async () => {
