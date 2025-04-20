@@ -1,10 +1,10 @@
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
     const navigate = useNavigate();
 
     return (
-        <div className="fixed top-0 left-0 w-full h-[110px] bg-gradient-to-b from-black to-transparent z-20">
+        <div className="fixed top-0 left-0 w-full h-[120px] bg-gradient-to-b from-black to-transparent z-20">
             <div className="flex items-center h-full">
                 <button className="mt-0.5 ml-5 w-[230px] text-3xl font-bold text-white bg-blue-900 cursor-pointer"
                     onClick={() => navigate("/")} > JStreaming </button>

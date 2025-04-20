@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Genres() {
     const [genres, setGenres] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState(28);
+    const [selectedGenre, setSelectedGenre] = useState(28); // Default to "Action" (ID: 28)
+    const navigate = useNavigate(); // Hook to navigate programmatically
 
     useEffect(() => {
         const fetchGenres = async () => {
@@ -24,9 +26,13 @@ function Genres() {
         fetchGenres();
     }, []);
 
+    const GenreClick = (genreId) => {
+        setSelectedGenre(genreId);
+        navigate(`/movies/${genreId}`);
+    };
+
     return (
         <div>
-            <h2 className="text-2xl font-bold mt-[110px]">Genres</h2>
             <ul className="list-none pl-0">
                 {genres.map((genre) => (
                     <li key={genre.id} className="mb-3">
@@ -34,7 +40,7 @@ function Genres() {
                             className={`px-4 py-2 text-xl font-bold cursor-pointer whitespace-nowrap ${
                                 selectedGenre === genre.id ? "underline text-sky-600" : "text-white"
                             }`}
-                            onClick={() => setSelectedGenre(genre.id)}
+                            onClick={() => GenreClick(genre.id)}
                         >
                             {genre.name}
                         </button>
