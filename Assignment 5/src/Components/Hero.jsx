@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,7 +15,8 @@ function Hero() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-            setMovies(response.data.results.slice(0, 20));        })();
+            setMovies(response.data.results.slice(0, 20));
+        })();
     }, []);
 
     return (

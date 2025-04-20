@@ -6,7 +6,7 @@ function Header() {
     return (
         <div className="fixed top-0 left-0 w-full h-[120px] bg-gradient-to-b from-black to-transparent z-20">
             <div className="flex items-center h-full">
-                <button className="mt-0.5 ml-5 w-[230px] text-3xl font-bold text-white bg-blue-900 cursor-pointer"
+                <button className="mt-0.5 ml-5 w-[230px] rounded-lg text-3xl font-bold text-white bg-blue-900 cursor-pointer"
                     onClick={() => navigate("/")} > JStreaming </button>
                 <input className="mt-0.5 ml-100 w-[500px] h-[30px] rounded-full border-none px-4 text-base outline-none bg-white text-black"
                     placeholder="Search Title" />
