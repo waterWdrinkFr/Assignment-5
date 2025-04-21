@@ -41,7 +41,7 @@ function DetailView() {
             <p className="text-lg mb-2"><strong>Release Date:</strong> {movie.release_date}</p>
             <p className="text-lg mb-2"><strong>Revenue:</strong> ${movie.revenue.toLocaleString()}</p>
             {trailer ? (
-                <div className="mt-18 mb-4">
+                <div className="mt-18 mb-32">
                     <h2 className="text-2xl font-bold mb-2">Trailer</h2>
                     <iframe
                         width="1120"
