@@ -19,16 +19,15 @@ function GenreView() {
 
     return (
         <div className="mt-[100px] p-4">
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-5 gap-4">
                 {movies.map((movie) => (
                     <div key={movie.id} className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
-                        <Link to={`/movie/${movie.id}`}>
+                        <Link to={`/movies/details/${movie.id}`}>
                             <img
                                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                                alt={movie.title}
-                                className="w-full h-auto rounded-md mb-2"
+                                className="w-full h-[85%] rounded-md mb-2"
                             />
-                            <h3 className="text-lg font-bold">{movie.title}</h3>
+                            <h3 className="text-[15px] font-bold">{movie.title}</h3>
                         </Link>
                     </div>
                 ))}

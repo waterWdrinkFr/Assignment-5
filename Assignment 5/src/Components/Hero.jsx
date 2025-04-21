@@ -15,7 +15,7 @@ function Hero() {
             const response = await axios.get(
                 `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`
             );
-            setMovies(response.data.results.slice(0, 20));
+            setMovies(response.data.results);
         })();
     }, []);
 
@@ -23,7 +23,7 @@ function Hero() {
         <div className="relative top-[110px] w-full">
             <div className="absolute z-10 w-full text-center top-[5%] px-4">
                 <div className="inline-block bg-blue-900/50 px-6 py-4 rounded-xl shadow-2xl">
-                    <h1 className="text-[50px] text-white font-bold text-center drop-shadow-md"> Catch up on the Latest and Greatest Shows and Movies</h1>
+                    <h1 className="text-[45px] text-white font-bold text-center drop-shadow-md"> Catch up on the Latest and Greatest Shows and Movies</h1>
                 </div>
             </div>
 
