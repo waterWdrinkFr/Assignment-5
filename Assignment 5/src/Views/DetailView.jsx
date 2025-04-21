@@ -44,8 +44,8 @@ function DetailView() {
                 <div className="mt-4">
                     <h2 className="text-2xl font-bold mb-2">Trailer</h2>
                     <iframe
-                        width="560"
-                        height="315"
+                        width="1120"
+                        height="630"
                         src={`https://www.youtube.com/embed/${trailer.key}`}
                         title="Movie Trailer"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
