@@ -33,12 +33,12 @@ function DetailView() {
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                 className="w-[250px] h-full rounded-md mb-2"
             />
-            <p className="text-lg mb-2"><strong>Rating:</strong> {movie.vote_average.toFixed(2)}/10</p>
+            <p className="text-lg mb-2"><strong>Rating:</strong> {movie.vote_average.toFixed(1)}/10</p>
             <p className="text-lg mb-2"><strong>Overview:</strong> {movie.overview}</p>
             <p className="text-lg mb-2"><strong>Runtime:</strong> {movie.runtime} minutes</p>
+            <p className="text-lg mb-2"><strong>Original Language:</strong> {movie.original_language.toUpperCase()}</p>
+            <p className="text-lg mb-2"><strong>Status:</strong> {movie.status.toLocaleString()}</p>
             <p className="text-lg mb-2"><strong>Release Date:</strong> {movie.release_date}</p>
-            <p className="text-lg mb-2"><strong>Language:</strong> {movie.original_language.toUpperCase()}</p>
-            <p className="text-lg mb-2"><strong>Budget:</strong> ${movie.budget.toLocaleString()}</p>
             <p className="text-lg mb-2"><strong>Revenue:</strong> ${movie.revenue.toLocaleString()}</p>
             {trailer ? (
                 <div className="mt-4">

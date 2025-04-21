@@ -27,7 +27,7 @@ function GenreView() {
                                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                                 className="w-full h-[85%] rounded-md mb-2"
                             />
-                            <h3 className="text-[15px] font-bold">{movie.title}</h3>
+                            <h3 className="text-[13px] font-bold">{movie.title}</h3>
                         </Link>
                     </div>
                 ))}
