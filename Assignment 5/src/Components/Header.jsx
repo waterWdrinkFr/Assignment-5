@@ -12,7 +12,7 @@ function Header() {
                     placeholder="Search Title" />
                 <span className="mt-6 ml-5 h-[40px] w-[70px] text-xl font-bold text-sky-600 underline cursor-pointer whitespace-nowrap"
                     onClick={() => navigate("/movies")} > Explore Movies </span>
-                <button className="mt-0.5 ml-40 h-[35px] w-[70px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer"
+                <button className="mt-0.5 ml-37.5 h-[35px] w-[70px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer"
                     onClick={() => navigate("/login")}> LOGIN </button>
                 <button className="mt-0.5 ml-5 h-[35px] w-[90px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer">
                     REGISTER </button>

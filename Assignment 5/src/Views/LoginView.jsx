@@ -6,16 +6,11 @@ function LoginView() {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        navigate("/");
-    };
-
     return (
         <div className="flex justify-center items-center h-screen bg-gradient-to-b from-gray-900 to-blue-700">
             <div className="bg-black p-8 rounded-lg shadow-lg w-[400px]">
                 <h1 className="text-2xl font-bold text-center text-blue-700 mb-6">Login</h1>
-                <form onSubmit={handleLogin} className="space-y-4">
+                <form onSubmit={(e) => {e.preventDefault();navigate("/");}} className="space-y-4">
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-white">
                             Email
