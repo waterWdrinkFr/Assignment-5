@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Genres from "../Components/Genres.jsx";
-import Header from "../Components/Header.jsx";
-import Footer from "../Components/Footer.jsx";
+import Genres from "../components/Genres.jsx";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 
 function MoviesView() {
     return (

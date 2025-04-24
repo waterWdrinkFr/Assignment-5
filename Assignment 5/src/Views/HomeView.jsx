@@ -1,7 +1,7 @@
-import Header from "../Components/Header";
-import Hero from "../Components/Hero"; 
+import Header from "../components/Header";
+import Hero from "../components/Hero"; 
 import Feature from "../Components/Feature";
-import Footer from "../Components/Footer";
+import Footer from "../components/Footer";
 
 function HomeView() {
     return (
