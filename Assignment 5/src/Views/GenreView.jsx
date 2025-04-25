@@ -19,7 +19,7 @@ function GenreView() {
 
     return (
         <div className="mt-[100px]">
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-4 gap-4">
                 {movies.map((movie) => (
                     <div key={movie.id} className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
                         <Link to={`/movies/details/${movie.id}`}>

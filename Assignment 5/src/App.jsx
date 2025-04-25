@@ -6,6 +6,7 @@ import GenreView from "./views/GenreView.jsx";
 import DetailView from "./views/DetailView.jsx";
 import LoginView from "./views/LoginView.jsx";
 import RegisterView from "./views/RegisterView.jsx";
+import ErrorView from "./views/ErrorView.jsx";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                 </Route>
                 <Route path="/login" element={<LoginView />} />
                 <Route path="/register" element={<RegisterView />} />
+                <Route path="/*" element={<ErrorView />} />
             </Routes>
         </Router>
     );

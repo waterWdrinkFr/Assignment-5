@@ -41,11 +41,11 @@ function DetailView() {
             <p className="text-lg mb-2"><strong>Release Date:</strong> {movie.release_date}</p>
             <p className="text-lg mb-2"><strong>Revenue:</strong> ${movie.revenue.toLocaleString()}</p>
             {trailer ? (
-                <div className="mt-18 mb-32">
+                <div className="mt-18 mb-18">
                     <h2 className="text-2xl font-bold mb-2">Trailer</h2>
                     <iframe
-                        width="1120"
-                        height="630"
+                        width="950"
+                        height="400"
                         src={`https://www.youtube.com/embed/${trailer.key}`}
                         title="Movie Trailer"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
