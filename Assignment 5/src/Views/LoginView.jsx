@@ -7,7 +7,7 @@ function LoginView() {
     const navigate = useNavigate();
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gradient-to-b from-gray-900 to-blue-700">
+        <div className="flex justify-center items-center h-screen bg-gradient-to-b from-black to-blue-600">
             <div className="bg-black p-8 rounded-lg shadow-lg w-[400px]">
                 <h1 className="text-2xl font-bold text-center text-blue-700 mb-6">Login</h1>
                 <form onSubmit={(e) => {e.preventDefault();navigate("/");}} className="space-y-4">
@@ -35,7 +35,7 @@ function LoginView() {
                         Login
                     </button>
                 </form>
-                <p className="text-sm text-center text-gray-600 mt-4"> <span onClick={() => navigate("/register")} className="text-blue-600 underline cursor-pointer">
+                <p className="text-sm text-center text-gray-600 mt-4"> Don't have an account? <span onClick={() => navigate("/register")} className="text-blue-600 underline cursor-pointer">
                         Register here 
                     </span>
                 </p>

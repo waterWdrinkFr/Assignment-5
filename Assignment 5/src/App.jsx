@@ -5,7 +5,7 @@ import MoviesView from "./views/MoviesView.jsx";
 import GenreView from "./views/GenreView.jsx";
 import DetailView from "./views/DetailView.jsx";
 import LoginView from "./views/LoginView.jsx";
-// import RegisterView from "./views/RegisterView.jsx";
+import RegisterView from "./views/RegisterView.jsx";
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
                     <Route path="details/:id" element={<DetailView />} />
                 </Route>
                 <Route path="/login" element={<LoginView />} />
-                {/* <Route path="/register" element={<RegisterView />} /> */}
+                <Route path="/register" element={<RegisterView />} />
             </Routes>
         </Router>
     );

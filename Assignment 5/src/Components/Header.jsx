@@ -14,8 +14,8 @@ function Header() {
                     onClick={() => navigate("/movies")} > Explore Movies </span>
                 <button className="mt-0.5 ml-37.5 h-[35px] w-[70px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer"
                     onClick={() => navigate("/login")}> LOGIN </button>
-                <button className="mt-0.5 ml-5 h-[35px] w-[90px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer">
-                    REGISTER </button>
+                <button className="mt-0.5 ml-5 h-[35px] w-[90px] rounded-lg text-xs font-bold text-white bg-blue-900 cursor-pointer"
+                    onClick={() => navigate("/register")}> REGISTER </button>
             </div>
         </div>
     );
