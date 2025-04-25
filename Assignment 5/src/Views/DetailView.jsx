@@ -47,9 +47,7 @@ function DetailView() {
                         width="950"
                         height="400"
                         src={`https://www.youtube.com/embed/${trailer.key}`}
-                        title="Movie Trailer"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
+                        title="Movie Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     ></iframe>
                 </div>
             ) : (
