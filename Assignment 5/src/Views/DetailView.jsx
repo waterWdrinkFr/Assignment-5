@@ -46,9 +46,8 @@ function DetailView() {
                     <iframe
                         width="950"
                         height="400"
-                        src={`https://www.youtube.com/embed/${trailer.key}`}
-                        title="Movie Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    ></iframe>
+                        src={`https://www.youtube.com/embed/${trailer.key}`} title="Movie Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
                 </div>
             ) : (
                 <p className="text-lg mt-4">No trailer available.</p>

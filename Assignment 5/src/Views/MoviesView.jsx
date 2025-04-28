@@ -12,7 +12,6 @@ function MoviesView() {
                     <h1 className="text-3xl font-bold mb-4">Explore Genres</h1>
                     <Genres />
                 </aside>
-
                 <main className="w-3/4 p-4">
                     <Outlet />
                 </main>
