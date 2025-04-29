@@ -7,7 +7,7 @@ function DetailView() {
     const [movie, setMovie] = useState(null);
 
     useEffect(() => {
-        async function fetchMovieDetails() {
+        async function fetchDetails() {
             try {
                 const response = await axios.get(
                     `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}&append_to_response=videos`
@@ -17,7 +17,7 @@ function DetailView() {
                 console.error("Error fetching movie details:", error);
             }
         }
-        fetchMovieDetails();
+        fetchDetails();
     }, [id]);
 
     if (!movie) {
