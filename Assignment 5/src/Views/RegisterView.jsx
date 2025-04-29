@@ -6,6 +6,7 @@ function RegisterView() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const navigate = useNavigate();
 
     return (
@@ -41,6 +42,13 @@ function RegisterView() {
                             Password
                         </label>
                         <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className="mt-1 block w-full px-4 py-2 rounded-md bg-white" placeholder="Enter your password" required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="re_enterPassword" className="block text-sm font-medium text-white">
+                            Re-enter Password
+                        </label>
+                        <input type="password" id="passwordConfirm" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="mt-1 block w-full px-4 py-2 rounded-md bg-white" placeholder="Enter your password" required
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-700 text-white py-2 px-4 rounded-md cursor-pointer" >
