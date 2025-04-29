@@ -14,7 +14,7 @@ function DetailView() {
                 );
                 setMovie(response.data);
             } catch (error) {
-                console.error("Error fetching movie details:", error);
+                navigate("/*");
             }
         }
         fetchDetails();

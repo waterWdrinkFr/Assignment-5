@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Genres() {
+function Genres(props) {
     const [genres, setGenres] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState(28);
+    const [selectedGenre, setSelectedGenre] = useState(props.defaultGenre || 28);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function Genres() {
                     )
                 );
             } catch (error) {
-                console.error("Error fetching genres:", error);
+                navigate("/*");
             }
         };
 
@@ -29,6 +29,9 @@ function Genres() {
     const GenreClick = (genreId) => {
         setSelectedGenre(genreId);
         navigate(`/movies/${genreId}`);
+        if (props.onGenreSelect) {
+            props.onGenreSelect(genreId);
+        }
     };
 
     return (
