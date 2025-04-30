@@ -28,7 +28,7 @@ function Hero() {
             </div>
 
             <Swiper modules={[Navigation, Pagination, Autoplay]} navigation autoplay={{ delay: 4000, disableOnInteraction: false }}
-                loop={true} className="w-full h-[550px]">
+                loop={true} className="w-full h-[800px]">
                 {movies.map((movie) => (
                     <SwiperSlide key={movie.id}>
                         <div className="relative w-full h-full">
