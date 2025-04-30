@@ -9,11 +9,20 @@ function RegisterView() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const navigate = useNavigate();
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+        navigate("/login");
+    };
+
     return (
         <div className="flex justify-center items-center h-screen bg-gradient-to-b from-black to-blue-600">
             <div className="bg-black p-8 rounded-lg shadow-lg w-[400px]">
                 <h1 className="text-2xl font-bold text-center text-blue-700 mb-6">Register</h1>
-                <form onSubmit={(e) => {e.preventDefault();navigate("/login");}} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                         <label htmlFor="first name" className="block text-sm font-medium text-white">
                             Name
