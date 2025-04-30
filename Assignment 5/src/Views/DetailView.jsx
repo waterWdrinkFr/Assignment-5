@@ -10,7 +10,7 @@ function DetailView() {
         async function fetchDetails() {
             try {
                 const response = await axios.get(
-                    `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}&append_to_response=videos`
+                    `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}&append_to_response=videos&include_adult=false`
                 );
                 setMovie(response.data);
             } catch (error) {

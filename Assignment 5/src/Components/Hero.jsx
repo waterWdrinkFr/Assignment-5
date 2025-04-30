@@ -13,7 +13,7 @@ function Hero() {
     useEffect(() => {
         (async function fetchMovies() {
             const response = await axios.get(
-                `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`
+                `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}&include_adult=false`
             );
             setMovies(response.data.results);
         })();

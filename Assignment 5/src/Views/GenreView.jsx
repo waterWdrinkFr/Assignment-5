@@ -10,7 +10,7 @@ function GenreView() {
     useEffect(() => {
         async function fetchMovies() {
             const response = await axios.get(
-                `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_TMDB_KEY}&with_genres=${genre_id}&page=${page}`
+                `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_TMDB_KEY}&with_genres=${genre_id}&page=${page}&include_adult=false`
             );
             setMovies(response.data.results);
         }

@@ -15,7 +15,7 @@ function Feature() {
     useEffect(() => {
         (async function getMovies() {
             const response = await axios.get(
-                `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
+                `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}&include_adult=false`
             );
             setMovies(shuffle(response.data.results).slice(0, 3));
         })();
