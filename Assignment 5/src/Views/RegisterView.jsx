@@ -64,7 +64,7 @@ function RegisterView() {
                         Register
                     </button>
                 </form>
-                <p className="text-sm text-center text-gray-600 mt-4"> Already have an account?{" "}
+                <p className="mt-4 text-sm text-center text-gray-600"> Already have an account?{" "}
                     <span onClick={() => navigate("/login")} className="text-blue-600 underline cursor-pointer" > Login here </span>
                 </p>
             </div>
