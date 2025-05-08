@@ -4,7 +4,7 @@ import axios from "axios";
 
 function Genres(props) {
     const [genres, setGenres] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState(props.defaultGenre || 28);
+    const [selectedGenre, setSelectedGenre] = useState(props.defaultGenre||28);
     const navigate = useNavigate();
 
     useEffect(() => {
