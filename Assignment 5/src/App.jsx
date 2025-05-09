@@ -3,7 +3,7 @@ import "./App.css";
 import HomeView from "./views/HomeView.jsx";
 import MoviesView from "./Views/MoviesView.jsx";
 import GenreView from "./views/GenreView.jsx";
-import DetailView from "./Views/DetailView.jsx";
+import DetailView from "./views/DetailView.jsx";
 import LoginView from "./views/LoginView.jsx";
 import RegisterView from "./views/RegisterView.jsx";
 import ErrorView from "./views/ErrorView.jsx";
