@@ -4,8 +4,8 @@ import axios from "axios";
 
 function Genres(props) {
     const [genres, setGenres] = useState([]);
-    const { genre_id } = useParams(); // Get genre_id from the URL
-    const [selectedGenre, setSelectedGenre] = useState(Number(genre_id) || props.defaultGenre || 28); // Sync with URL
+    const { genre_id } = useParams();
+    const [selectedGenre, setSelectedGenre] = useState(Number(genre_id) || props.defaultGenre || 28);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,7 +27,6 @@ function Genres(props) {
         fetchGenres();
     }, []);
 
-    // Update selectedGenre when the URL changes
     useEffect(() => {
         if (genre_id) {
             setSelectedGenre(Number(genre_id));
