@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 function Genres(props) {
     const [genres, setGenres] = useState([]);
-    const [selectedGenre, setSelectedGenre] = useState(props.defaultGenre||28);
+    const { genre_id } = useParams(); // Get genre_id from the URL
+    const [selectedGenre, setSelectedGenre] = useState(Number(genre_id) || props.defaultGenre || 28); // Sync with URL
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -25,6 +26,13 @@ function Genres(props) {
 
         fetchGenres();
     }, []);
+
+    // Update selectedGenre when the URL changes
+    useEffect(() => {
+        if (genre_id) {
+            setSelectedGenre(Number(genre_id));
+        }
+    }, [genre_id]);
 
     const GenreClick = (genreId) => {
         setSelectedGenre(genreId);
