@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import HomeView from "./views/HomeView.jsx";
-import MoviesView from "./Views/MoviesView.jsx";
+import MoviesView from "./views/MoviesView.jsx";
 import GenreView from "./views/GenreView.jsx";
 import DetailView from "./views/DetailView.jsx";
 import LoginView from "./views/LoginView.jsx";
