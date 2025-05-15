@@ -37,6 +37,7 @@ function GenreView() {
                 className="mt-2 ml-4 px-8 py-2 bg-blue-600 text-white rounded-lg cursor-pointer" >
                 Next
             </button>
+            <span className="ml-72 text-white">Page {page}</span>
         </div>
     );
 }
