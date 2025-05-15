@@ -29,8 +29,7 @@ function DetailView() {
     return (
         <div className="mt-[100px] p-4 text-white">
             <h1 className="text-4xl font-bold mb-4">{movie.title}</h1>
-            <img
-                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                 className="w-[250px] h-full rounded-md mb-2"
             />
             <p className="text-lg mb-2"><strong>Rating:</strong> {movie.vote_average.toFixed(1)}/10</p>

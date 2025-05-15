@@ -46,9 +46,7 @@ function Genres(props) {
             <ul className="list-none pl-0">
                 {genres.map((genre) => (
                     <li key={genre.id} className="mb-3">
-                        <button
-                            className={`px-4 py-2 text-xl font-bold cursor-pointer whitespace-nowrap ${
-                                selectedGenre === genre.id ? "underline text-sky-600" : "text-white"
+                        <button className={`px-4 py-2 text-xl font-bold cursor-pointer whitespace-nowrap ${selectedGenre === genre.id ? "underline text-sky-600" : "text-white"
                             }`}
                             onClick={() => GenreClick(genre.id)}
                         >
